@@ -60,6 +60,10 @@
         "defaultRef": "dev"
     },
     {
+        "name": "razor-compiler",
+        "defaultRemote": "https://github.com/dotnet/razor-compiler"
+    },
+    {
         "name": "roslyn",
         "defaultRemote": "https://github.com/dotnet/roslyn"
     },
@@ -78,6 +82,10 @@
     {
         "name": "source-build",
         "defaultRemote": "https://github.com/dotnet/source-build"
+    },
+    {
+        "name": "source-build-externals",
+        "defaultRemote": "https://github.com/dotnet/source-build-externals"
     },
     {
         "name": "source-build-reference-packages",
