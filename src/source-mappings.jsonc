@@ -1,5 +1,8 @@
 {
+    // Location withing the VMR where the source-build patches are stored
     "patchesPath": "src/installer/src/SourceBuild/tarball/patches",
+
+    // These defaults are added to all mappings unless `ignoreDefaults: true` is specified
     "defaults": {
         "defaultRef": "main",
         "exclude": [
@@ -9,9 +12,10 @@
             "**/*.pdb",
             "**/*.mdb",
             "**/*.zip",
-            "**/*.nupkg"
+            "**/*.nupkg",
         ]
     },
+
     "mappings": [
         {
             "name": "arcade",
@@ -19,7 +23,12 @@
         },
         {
             "name": "aspnetcore",
-            "defaultRemote": "https://github.com/dotnet/aspnetcore"
+            "defaultRemote": "https://github.com/dotnet/aspnetcore",
+            "exclude": [
+                "submodules/MessagePack-CSharp/**/*.dll",
+                "**/samples/**/jquery-validation-unobtrusive/.bower.json",
+                "**/samples/**/jquery-validation-unobtrusive/*.js",
+            ]
         },
         {
             "name": "clicommandlineparser",
@@ -47,11 +56,21 @@
         },
         {
             "name": "installer",
-            "defaultRemote": "https://github.com/dotnet/installer"
+            "defaultRemote": "https://github.com/dotnet/installer",
+            "exclude": [
+                // We don't need the tarball content in the VMR again, it's already in the root
+                "src/SourceBuild/tarball/content/**/*",
+            ]
         },
         {
             "name": "linker",
-            "defaultRemote": "https://github.com/dotnet/linker"
+            "defaultRemote": "https://github.com/dotnet/linker",
+            "exclude": [
+                "external/cecil/**/*.dll",
+                "external/cecil/**/*.exe",
+                "external/cecil/**/*.pdb",
+                "external/cecil/**/*.mdb",
+            ]
         },
         {
             "name": "llvm-project",
@@ -95,7 +114,10 @@
             "name": "source-build-externals",
             "defaultRemote": "https://github.com/dotnet/source-build-externals",
             "exclude": [
-                "**/humanizer/samples/**/*.js"
+                "src/humanizer/samples/**/*.js",
+                "src/application-insights/**/*.exe",
+                "src/application-insights/**/*.dll",
+                "src/application-insights/**/*.zip",
             ]
         },
         {
