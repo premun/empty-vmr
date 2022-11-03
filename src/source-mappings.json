@@ -49,10 +49,6 @@
             ]
         },
         {
-            "name": "clicommandlineparser",
-            "defaultRemote": "https://github.com/dotnet/clicommandlineparser"
-        },
-        {
             "name": "command-line-api",
             "defaultRemote": "https://github.com/dotnet/command-line-api"
         },
@@ -74,11 +70,7 @@
         },
         {
             "name": "installer",
-            "defaultRemote": "https://github.com/dotnet/installer",
-            "exclude": [
-                // We don't need the tarball content in the VMR again, it's already copied in the root
-                "src/SourceBuild/tarball/content/**/*"
-            ]
+            "defaultRemote": "https://github.com/dotnet/installer"
         },
         {
             "name": "linker",
@@ -89,11 +81,6 @@
                 "external/cecil/**/*.pdb",
                 "external/cecil/**/*.mdb"
             ]
-        },
-        {
-            "name": "llvm-project",
-            "defaultRemote": "https://github.com/dotnet/llvm-project",
-            "defaultRef": "dotnet/main"
         },
         {
             "name": "msbuild",
@@ -123,10 +110,6 @@
         {
             "name": "sdk",
             "defaultRemote": "https://github.com/dotnet/sdk"
-        },
-        {
-            "name": "source-build",
-            "defaultRemote": "https://github.com/dotnet/source-build"
         },
         {
             "name": "source-build-externals",
