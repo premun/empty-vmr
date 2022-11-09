@@ -16,7 +16,7 @@
     "additionalMappings": [
         {
             "source": "src/installer/src/SourceBuild/tarball/content",
-            "destination": null
+            "destination": ""
         },
         {
             "source": "src/installer/eng/common",
